@@ -1,0 +1,28 @@
+yoYoLint: Violation: [INT_PARAM_NYS_YOSYS]: SystemVerilog parameter of type int is NYS - Not Yet Supported in Yosys 
+    parameter int p_int1 = 4;
+yoYoLint: Violation: [LOGIC_PARAM_NYS_YOSYS]: SystemVerilog parameter of type logic is NYS - Not Yet Supported in Yosys 
+    parameter logic [3:0] p_logic = 4'b1101;
+yoYoLint: Violation: [LOGIC_PARAM_NYS_YOSYS]: SystemVerilog parameter of type logic is NYS - Not Yet Supported in Yosys // Binary literal
+    // Initialize the packed array with a literal
+    localparam logic [3:0] lp_logic = 4'b1101;
+yoYoLint: Violation: [NO_ENDLABEL_IN_CHECKER]: SystemVerilog checker with end-label is NYS - Not Yet Supported in Yosys : c1
+yoYoLint: Violation: [NO_PORTS_IN_CHECKER]: SystemVerilog checker with ports is NYS - Not Yet Supported in Yosys
+    checker range_checker(logic [3:0] signal);
+        always_ff @(posedge clk or posedge reset) begin
+            if (reset) begin
+                // Do nothing on reset
+            end else begin
+                assert(signal >= 4 && signal <= 11)
+                    else $error("monitored_signal out of range: %0d", signal);
+            end
+        end
+    endchecker
+yoYoLint: Violation: [INT_PARAM_NYS_YOSYS]: SystemVerilog parameter of type int is NYS - Not Yet Supported in Yosys 
+    parameter int p_int1 = 4;
+yoYoLint: Violation: [LOGIC_PARAM_NYS_YOSYS]: SystemVerilog parameter of type logic is NYS - Not Yet Supported in Yosys 
+    parameter logic [3:0] p_logic = 4'b1101;
+yoYoLint: Violation: [LOGIC_PARAM_NYS_YOSYS]: SystemVerilog parameter of type logic is NYS - Not Yet Supported in Yosys // Binary literal
+    // Initialize the packed array with a literal
+    localparam logic [3:0] lp_logic = 4'b1101;
+yoYoLint: Violation: [INT_TYPE_NYS_YOSYS]: SystemVerilog int data type is NYS - Not Yet Supported in Yosys
+  int a;
