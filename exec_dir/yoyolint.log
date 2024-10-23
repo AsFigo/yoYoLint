@@ -1,8 +1,8 @@
-yoYoLint: Violation: [INT_PARAM_NYS_YOSYS]: SystemVerilog parameter of type int is NYS - Not Yet Supported in Yosys 
+yoYoLint: Violation: [INT_PARAM_NYS]: SystemVerilog parameter of type int is NYS - Not Yet Supported in Yosys 
     parameter int p_int1 = 4;
-yoYoLint: Violation: [LOGIC_PARAM_NYS_YOSYS]: SystemVerilog parameter of type logic is NYS - Not Yet Supported in Yosys 
+yoYoLint: Violation: [LOGIC_PARAM_NYS]: SystemVerilog parameter of type logic is NYS - Not Yet Supported in Yosys 
     parameter logic [3:0] p_logic = 4'b1101;
-yoYoLint: Violation: [LOGIC_PARAM_NYS_YOSYS]: SystemVerilog parameter of type logic is NYS - Not Yet Supported in Yosys // Binary literal
+yoYoLint: Violation: [LOGIC_PARAM_NYS]: SystemVerilog parameter of type logic is NYS - Not Yet Supported in Yosys // Binary literal
     // Initialize the packed array with a literal
     localparam logic [3:0] lp_logic = 4'b1101;
 yoYoLint: Violation: [NO_ENDLABEL_IN_CHECKER]: SystemVerilog checker with end-label is NYS - Not Yet Supported in Yosys : c1
@@ -17,12 +17,12 @@ yoYoLint: Violation: [NO_PORTS_IN_CHECKER]: SystemVerilog checker with ports is 
             end
         end
     endchecker
-yoYoLint: Violation: [INT_PARAM_NYS_YOSYS]: SystemVerilog parameter of type int is NYS - Not Yet Supported in Yosys 
+yoYoLint: Violation: [INT_PARAM_NYS]: SystemVerilog parameter of type int is NYS - Not Yet Supported in Yosys 
     parameter int p_int1 = 4;
-yoYoLint: Violation: [LOGIC_PARAM_NYS_YOSYS]: SystemVerilog parameter of type logic is NYS - Not Yet Supported in Yosys 
+yoYoLint: Violation: [LOGIC_PARAM_NYS]: SystemVerilog parameter of type logic is NYS - Not Yet Supported in Yosys 
     parameter logic [3:0] p_logic = 4'b1101;
-yoYoLint: Violation: [LOGIC_PARAM_NYS_YOSYS]: SystemVerilog parameter of type logic is NYS - Not Yet Supported in Yosys // Binary literal
+yoYoLint: Violation: [LOGIC_PARAM_NYS]: SystemVerilog parameter of type logic is NYS - Not Yet Supported in Yosys // Binary literal
     // Initialize the packed array with a literal
     localparam logic [3:0] lp_logic = 4'b1101;
-yoYoLint: Violation: [INT_TYPE_NYS_YOSYS]: SystemVerilog int data type is NYS - Not Yet Supported in Yosys
+yoYoLint: Violation: [INT_TYPE_NYS]: SystemVerilog int data type is NYS - Not Yet Supported in Yosys
   int a;
