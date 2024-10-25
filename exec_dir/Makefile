@@ -9,16 +9,16 @@ yl:
 	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_sv_logic_param.sv >> yoyolint.log
 	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_sv_upk_arr_assign_yosys.sv >> yoyolint.log
 	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_sv_2d_arr_ports.sv >> yoyolint.log
-        python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_#17.sv >> yoyolint.log
-	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_#16.sv >> yoyolint.log
-	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_#15.sv >> yoyolint.log
-	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_#14.sv >> yoyolint.log
-	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_#13.sv >> yoyolint.log
-	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_#8.sv >> yoyolint.log
-	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_#7.sv >> yoyolint.log
-	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_#6.sv >> yoyolint.log
-	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_#5.sv >> yoyolint.log
-	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_#4.sv >> yoyolint.log
-	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_#3.sv >> yoyolint.log
-        python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_#2.sv >> yoyolint.log
+        python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_17.sv >> yoyolint.log
+	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_16.sv >> yoyolint.log
+	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_15.sv >> yoyolint.log
+	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_14.sv >> yoyolint.log
+	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_13.sv >> yoyolint.log
+	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_8.sv >> yoyolint.log
+	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_7.sv >> yoyolint.log
+	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_6.sv >> yoyolint.log
+	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_5.sv >> yoyolint.log
+	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_4.sv >> yoyolint.log
+	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_3.sv >> yoyolint.log
+        python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_2.sv >> yoyolint.log
 	cat yoyolint.log
