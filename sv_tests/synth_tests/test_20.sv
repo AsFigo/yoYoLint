@@ -1,36 +1,31 @@
-// Declare the struct outside the module
-typedef struct packed {
-    logic first;
-    logic second;
-    logic third;
-    logic fourth;
-} my_struct_t;
+module my_design (
+    input logic clk,
+    input logic reset,
+    input logic in,
+    output logic out
+);
 
-module top(output [3:0] b);
-    my_struct_t a;
+    // Struct definition inside the module
+    typedef struct {
+        logic in_val;   // Input value
+        logic out_val;  // Output value
+    } data_t;
 
-    // Assign each bit of output b to the struct fields
-    assign b = {a.fourth, a.third, a.second, a.first};
+    // Declare a variable of the struct type
+    data_t data;
 
-   initial
-       begin
+    // Always block for synchronous logic
+    always_ff @(posedge clk or posedge reset) begin
+        if (reset) begin
+            data.out_val <= 1'b0; // Reset output
+        end else begin
+            data.in_val <= in;    // Capture input
+            data.out_val <= data.in_val; // Update output
+        end
+    end
 
-	$monitor("a.fourth = %b, a.third = %b, a.second = %b, a.first = %b", 
-                    a.fourth, a.third, a.second, a.first);
-        a.first = 0;
-        a.second = 0;
-        a.third = 0;
-        a.fourth = 0;
-
-       #10;
-        a.first = 1;
-        a.second = 0;
-        a.third = 0;
-        a.fourth = 0;
-        #10;   
-       $finish;	
-      end
-
-
+    // Assign the output from the struct
+    assign out = data.out_val;
 
 endmodule
+
