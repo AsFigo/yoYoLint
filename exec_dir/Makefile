@@ -9,4 +9,6 @@ yl:
 	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_sv_logic_param.sv >> yoyolint.log
 	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_sv_upk_arr_assign_yosys.sv >> yoyolint.log
 	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_sv_2d_arr_ports.sv >> yoyolint.log
+	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_clog2_bit_size.sv >> yoyolint.log
+	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_casting.sv >> yoyolint.log
 	cat yoyolint.log
