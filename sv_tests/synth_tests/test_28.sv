@@ -1,4 +1,4 @@
-interface my_interface(input logic clk);
+interface my_if(input logic clk); //changed the name using _if
     logic [7:0] data;
     logic valid;
 endinterface
@@ -7,7 +7,7 @@ module tb_my_dut;
     logic clk;
     logic rst_n;
 
-    my_interface inf(.clk(clk));
+    my_if inf(.clk(clk));
 
     initial begin
         clk = 0;
@@ -20,10 +20,10 @@ module tb_my_dut;
     end
 
     initial begin
+        // Drive data through interface
         inf.data = 8'd0;
         inf.valid = 1'b0; // Initialize valid signal
 
-        // Wait for some cycles to see output
         repeat (10) @(posedge clk);
 
         // Simulate data increment
