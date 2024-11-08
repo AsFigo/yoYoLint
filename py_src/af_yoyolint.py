@@ -150,6 +150,21 @@ def NO_ENUM_DEF_IN_MOD(lvCuScp):
           msg += str(lv_tdef_s)
           lvRID = 'NO_ENUM_DEF_IN_MOD'
           yYLMsg(lvRID, msg)
+          
+def NO_ENDLABEL_IN_FN(lvCuScp):
+  if (lvCuScp.kind.name == 'ModuleDeclaration'):
+    for lv_mod_mem_i in lvCuScp.members:
+      if (lv_mod_mem_i.kind.name == 'FunctionDeclaration'):
+        if (lv_mod_mem_i.endBlockName is not None):
+          lv_code_s = str(lv_mod_mem_i.endBlockName)
+          msg = 'Endlabel usage is a good coding style that helps in debug '
+          msg += 'and maintenance of the code. However, Yosys does not '
+          msg += 'support this style yet (NYS). Recommended to use the label '
+          msg += 'as a comment instead \n'
+          msg += 'endfunction ' + lv_code_s
+          lvRID = 'NO_ENDLABEL_IN_FN'
+          yYLMsg(lvRID, msg)
+
 
 mod_count = []
 
@@ -207,6 +222,8 @@ def yyLModuleLint(lvCuScp):
   REUSE_NO_TDEF_IN_MOD(lvCuScp)
   # Saanvi added
   NO_ENUM_DEF_IN_MOD(lvCuScp)
+  NO_ENDLABEL_IN_FN(lvCuScp)
+  
   REUSE_ONE_MOD_PER_FILE(lvCuScp)
   if (lvCuScp.kind.name == 'ModuleDeclaration'):
     for lv_mod_mem_i in lvCuScp.members:
