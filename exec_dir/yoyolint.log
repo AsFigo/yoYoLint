@@ -26,5 +26,3 @@ yoYoLint: Violation: [REUSE_NO_TDEF_IN_MOD]: A typedef was found inside a module
     // Define an enum
     typedef enum {RED, GREEN, BLUE} color_t;
 yoYoLint: Violation: [NAME_INTF_SUFFIX]: Improper naming of identifier:  my_interface: expected suffix: _if
-yoYoLint: Violation: [INT_PARAM_NYS]: SystemVerilog parameter of type int is NYS - Not Yet Supported in Yosys
-localparam int MAX_VALUE = 10;

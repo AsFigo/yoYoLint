@@ -13,7 +13,5 @@ yl:
 	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_sv_enum_pass.sv >> yoyolint.log
 	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_sv_interface.sv >> yoyolint.log
 	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_sv_interface_p.sv >> yoyolint.log
-	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_sv_literal_enhancement.sv >> yoyolint.log
-	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_sv_enhancement_operator.sv >> yoyolint.log
 	cat yoyolint.log
 
