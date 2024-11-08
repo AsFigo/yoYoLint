@@ -1,3 +1,4 @@
+
 // Saanvi - adding test for issue #33 
 module skid_buffer #(parameter WIDTH = 8)(
   input  logic clk, rstn, s_valid, m_ready,
@@ -5,7 +6,6 @@ module skid_buffer #(parameter WIDTH = 8)(
   output logic [WIDTH-1:0] m_data,
   output logic m_valid, s_ready
 );
-  enum {EMPTY, PARTIAL, FULL} state, state_next;
   bit b1;
 
 endmodule
