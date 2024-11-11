@@ -1,10 +1,12 @@
+
+typedef enum {RED, GREEN, BLUE} color_t;
+
 module enum_test;
-    // Define an enum
-    typedef enum {RED, GREEN, BLUE} color_t;
 
     color_t current_color;
 
     initial begin
+        // Initialize the enum variable
         current_color = RED;
 
         if (current_color == RED) begin
@@ -31,6 +33,7 @@ module enum_test;
             $display("Color is not BLUE");
         end
 
+        // Finish simulation after testing
         #10ns;
         $finish;
     end
