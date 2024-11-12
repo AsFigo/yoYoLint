@@ -253,6 +253,19 @@ def yyLChkrLint(lvCuScp):
   if (lvCuScp.kind.name == 'CheckerDeclaration'):
     NO_PORTS_IN_CHECKER(lvCuScp)
     NO_ENDLABEL_IN_CHECKER(lvCuScp)
+    
+def NO_ENDLABEL_IN_PKG(lvPkgScope):
+  if (lvPkgScope.blockName is not None):
+    lvRID = 'NO_ENDLABEL_IN_PKG'
+    msg = 'Using endlabels for SystemVerilog package is '
+    msg += 'NYS - Not Yet Supported in Yosys. \n'
+    msg += str(lvPkgScope.blockName)
+    yYLMsg (lvRID, msg)
+
+def yyLPkgLint(lvCuScp):
+  if (lvCuScp.kind.name == 'PackageDeclaration'):
+    NO_ENDLABEL_IN_PKG(lvCuScp)
+
 
 args = yYLArgParse()
 
@@ -273,5 +286,6 @@ for scope_i in (tree.root.members):
   yYLChkNaming(scope_i)
   yyLModuleLint(scope_i)
   yyLChkrLint(scope_i)
+  yyLPkgLint(scope_i)
   DBG_AVOID_BEGIN_IN_FN(scope_i)
 
