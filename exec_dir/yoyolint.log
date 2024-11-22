@@ -1,10 +1,6 @@
-yoYoLint: Violation: [INT_PARAM_NYS]: SystemVerilog parameter of type int is NYS - Not Yet Supported in Yosys 
-    parameter int p_int1 = 4;
-yoYoLint: Violation: [LOGIC_PARAM_NYS]: SystemVerilog parameter of type logic is NYS - Not Yet Supported in Yosys 
-    parameter logic [3:0] p_logic = 4'b1101;
-yoYoLint: Violation: [LOGIC_PARAM_NYS]: SystemVerilog parameter of type logic is NYS - Not Yet Supported in Yosys // Binary literal
-    // Initialize the packed array with a literal
-    localparam logic [3:0] lp_logic = 4'b1101;
+yoYoLint: Violation: [INT_PARAM_NYS]: SystemVerilog parameter of type int is NYS - Not Yet Supported in Yosys
+  //Declare the constant variable directly in the module, since Yosys doesn't support packages.
+  localparam int KL = 64;
 yoYoLint: Violation: [NO_ENDLABEL_IN_CHECKER]: SystemVerilog checker with end-label is NYS - Not Yet Supported in Yosys : c1
 yoYoLint: Violation: [NO_PORTS_IN_CHECKER]: SystemVerilog checker with ports is NYS - Not Yet Supported in Yosys
     checker range_checker(logic [3:0] signal);
@@ -26,3 +22,7 @@ yoYoLint: Violation: [LOGIC_PARAM_NYS]: SystemVerilog parameter of type logic is
     localparam logic [3:0] lp_logic = 4'b1101;
 yoYoLint: Violation: [INT_TYPE_NYS]: SystemVerilog int data type is NYS - Not Yet Supported in Yosys
   int a;
+yoYoLint: Violation: [REUSE_NO_TDEF_IN_MOD]: A typedef was found inside a module This prevents reuse as the enum/typedef scope is module only An assertion model that binds to this module and check the states using the typedef will be harder to implement in such cases. Please move the typedef to a package and import that package inside the module
+    // Define an enum
+    typedef enum {RED, GREEN, BLUE} color_t;
+yoYoLint: Violation: [NAME_INTF_SUFFIX]: Improper naming of identifier:  my_interface: expected suffix: _if
