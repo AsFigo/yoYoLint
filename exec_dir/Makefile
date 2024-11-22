@@ -12,4 +12,5 @@ yl:
 	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_clog2_bit_size.sv >> yoyolint.log
 	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_casting.sv >> yoyolint.log
 	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_31.sv >> yoyolint.log
+	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_48.sv >> yoyolint.log
 	cat yoyolint.log
