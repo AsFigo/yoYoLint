@@ -28,6 +28,8 @@ yl:
 	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_32.sv > yoyolint.log
 	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_33.sv > yoyolint.log
 	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_34.sv > yoyolint.log
+	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_54.sv > yoyolint.log
+	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_55.sv > yoyolint.log
 	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_casting.sv > yoyolint.log
 	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_clog2_bit_size.sv > yoyolint.log
 	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_wildcard.sv > yoyolint.log
@@ -38,12 +40,16 @@ yl:
 	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_sv_logic_param.sv >> yoyolint.log
 	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_sv_2d_arr_ports.sv >> yoyolint.log
 
-  python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_clog2_bit_size.sv >> yoyolint.log
+	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_clog2_bit_size.sv >> yoyolint.log
+
 	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_casting.sv >> yoyolint.log
 	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_31.sv >> yoyolint.log
 	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_48.sv >> yoyolint.log
+  python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_54.sv >> yoyolint.log
+  python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_55.sv >> yoyolint.log
 	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_20.sv >> yoyolint.log
-  python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_sv_enum.sv >> yoyolint.log
+
+	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_sv_enum.sv >> yoyolint.log
 	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_sv_enum_pass.sv >> yoyolint.log
 	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_sv_interface.sv >> yoyolint.log
 	python3 ../py_src/af_yoyolint.py -t ../sv_tests/synth_tests/test_sv_interface_p.sv >> yoyolint.log
